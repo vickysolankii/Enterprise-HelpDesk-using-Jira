@@ -55,7 +55,6 @@ Here is the functional logic and visual proof of the custom automation workflows
 
 *📸 **Core Automations Architecture Map:***
 ![Jira Automation Flow Mapping](screenshots/12_Final_Automation_Flow.png)
-![OS Ticket Page Installation Reference](screenshots/os-ticket-page-installation.png)
 
 ---
 
