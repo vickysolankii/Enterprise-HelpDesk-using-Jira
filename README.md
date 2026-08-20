@@ -19,7 +19,9 @@ This repository contains the design, implementation, and configuration documenta
 
 ![Jira Template Selection](screenshots/basic-it-sevice-management-template.png)
 
-*📸 **Customized Support Catalogs & Requests:***
+*📸 **Customized Support Catalogs & Requests(Portal for user reqest):***
+![Laptop & Hardware Support Catalog](screenshots/portal.png)
+
 ![Laptop & Hardware Support Catalog](screenshots/laptop-and-hardware-support.png)
 ![Software & Application Access Request](screenshots/Software%20&%20Application%20Access.png)
 ![Account & Password Lockout Form](screenshots/Account%20&%20Password%20Lockout.png)
