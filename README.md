@@ -30,6 +30,9 @@ This repository contains the design, implementation, and configuration documenta
 
 ![Account & Password Lockout Form](screenshots/MONITOER.png)
 
+![Account & Password Lockout Form](screenshots/broken-keyboard.png)
+
+![Account & Password Lockout Form](screenshots/batry-issue.png)
 
 ---
 
