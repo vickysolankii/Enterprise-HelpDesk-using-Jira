@@ -34,6 +34,13 @@ This repository contains the design, implementation, and configuration documenta
 
 ![Account & Password Lockout Form](screenshots/batry-issue.png)
 
+![Account & Password Lockout Form](screenshots/adobe-pro-installation.png)
+
+![Account & Password Lockout Form](screenshots/slack-cyber-adit.png)
+
+![Account & Password Lockout Form](screenshots/zoom-meeting.png)
+
+
 ---
 
 ### 2. Incident Management & Queue Configuration (Back-End)
