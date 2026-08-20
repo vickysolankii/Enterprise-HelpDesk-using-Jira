@@ -15,8 +15,9 @@ This repository contains the design, implementation, and configuration documenta
   * **Account & Password Lockout**: Configured high-visibility intake fields for quick identification.
 
 *📸 **Project Setup & Base Template Configuration:***
-![Jira Template Selection](screenshots/basic-it-sevice-management-template.png)
 ![Jira Space Creation](screenshots/jira-creat-space.png)
+
+![Jira Template Selection](screenshots/basic-it-sevice-management-template.png)
 
 *📸 **Customized Support Catalogs & Requests:***
 ![Laptop & Hardware Support Catalog](screenshots/laptop-and-hardware-support.png)
