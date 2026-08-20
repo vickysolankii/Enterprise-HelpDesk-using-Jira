@@ -71,6 +71,76 @@ Here is the functional logic and visual proof of the custom automation workflows
 * **Urgent Alert for Aging Tickets**: Daily morning sweep that places an escalation flag on any item stuck in `In Progress` for more than 5 days.
 
 *📸 **Core Automations Architecture Map:***
+
+### 🖥️ 1. Auto-Assign Software Tickets to App Team
+* **Description**: Automatically scans incoming service requests for application and software deployment issues. If matched, it circumvents the general L1 queue and routes the ticket directly to the specialized Application Support Team to reduce response lag.
+* **Visual Configuration**:
+![Auto-Assign Software](screenshots/Auto-Assign%20Software%20Tickets%20to%20App%20Team.png)
+
+---
+
+### 🔑 2. Auto-Assign Urgent Password Tickets
+* **Description**: Triggers instantly upon new ticket ingestion if credential or account block keys are detected. It bypasses manual triage and auto-assigns the ticket to an active technician for immediate access remediation.
+* **Visual Configuration**:
+![Password Auto-Assign](screenshots/Auto-Assign%20Urgent%20Password%20Tickets.png)
+
+---
+
+### 🚨 3. VIP Manager Escalation Rule
+* **Description**: Monitors inbound ticket metadata for executive markers or keywords like *Manager*, *Urgent*, or *CEO*. Upon detection, it programmatically escalates the issue field status to **Highest Priority** and flags the incident response track.
+* **Visual Configuration**:
+![VIP Escalation](screenshots/VIP%20Manager%20Escalation%20Rule.png)
+
+---
+
+### 📦 4. Hardware Alert Email Notification
+* **Description**: Handles cross-functional logistics synchronization. When an end-user logs a physical device failure or device swap request, this rule sends an external email dispatch to the inventory warehouse supervisor to pre-stage physical asset stock.
+* **Visual Configuration**:
+![Hardware Alert Notification](screenshots/Hardware%20Alert%20Email%20Notification.png)
+
+---
+
+### 🛑 5. Hardware Asset ID Mandate
+* **Description**: Acts as an inline form data validator. If a consumer submits a hardware breakdown ticket but leaves the critical **Asset ID / Serial Number** layout blank, the machine catches it, updates the status to `Waiting for Customer`, and flags it with an instruction note.
+* **Visual Configuration**:
+![Asset ID Validation](screenshots/Hardware%20Asset%20ID%20Mandate.png)
+
+---
+
+### 🤝 6. First Response SLA Greeting
+* **Description**: Ensures instant engagement metrics. The exact second an end-user logs a complaint on the service portal, the engine prints an automatic professional welcome and tracking comment on the ticket history stream to maximize Customer Satisfaction (CSAT).
+* **Visual Configuration**:
+![First Response Greeting](screenshots/First%20Response%20SLA%20Greeting.png)
+
+---
+
+### 📊 7. CSAT Feedback Survey
+* **Description**: Governs the final stage of the ticket lifecycle. When a field engineer completes the fix and transitions the state architecture to **Done**, this workflow automatically emails a structured star-rating and satisfaction evaluation poll to the client.
+* **Visual Configuration**:
+![CSAT Survey Dispatch](screenshots/CSAT%20Feedback%20Survey.png)
+
+---
+
+### 🔄 8. Reopen Ticket on Customer Reply
+* **Description**: Safeguards resolved data loops. If an end-user responds or replies to a closed or archived request ticket, the automation identifies the user comment and dynamically shifts the workspace state layout back into the active **In Progress** view.
+* **Visual Configuration**:
+![Reopen Ticket Flow](screenshots/Reopen%20Ticket%20on%20Customer%20Reply.png)
+
+---
+
+### 🧹 9. Auto-Close Inactive Tickets
+* **Description**: Manages dashboard hygiene via a nightly database cron sweep. It automatically identifies stagnant tickets residing under the `Waiting for Customer` column and transitions them to full closure if the client fails to reply within **3 business days**.
+* **Visual Configuration**:
+![Auto-Close Inactive Flow](screenshots/Auto-Close%20Inactive%20Tickets.png)
+
+---
+
+### 🔐 10. Account & Password Lockout (Portal Form Reference)
+* **Description**: Captures and displays the front-end intake schema for high-priority user validation requests, serving as the user entry point that drives the background assignment matrix.
+* **Visual Configuration**:
+![Account Lockout Intake](screenshots/Account%20&%20Password%20Lockout.png)
+
+
 ![Jira Automation Flow Mapping](screenshots/12_Final_Automation_Flow.png)
 
 ---
