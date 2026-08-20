@@ -14,26 +14,47 @@ This repository contains the design, implementation, and configuration documenta
   * **Software & Application Access**: Integrated baseline justification parameters.
   * **Account & Password Lockout**: Configured high-visibility intake fields for quick identification.
 
+*📸 **Project Setup & Base Template Configuration:***
+![Jira Template Selection](screenshots/basic-it-sevice-management-template.png)
+![Jira Space Creation](screenshots/jira-creat-space.png)
+
+*📸 **Customized Support Catalogs & Requests:***
+![Laptop & Hardware Support Catalog](screenshots/laptop-and-hardware-support.png)
+![Software & Application Access Request](screenshots/Software%20&%20Application%20Access.png)
+![Account & Password Lockout Form](screenshots/Account%20&%20Password%20Lockout.png)
+
+---
+
 ### 2. Incident Management & Queue Configuration (Back-End)
 * **Ticket Lifecycle Tracking**: Structured a 4-stage operational workflow (`Waiting for Support` ➔ `In Progress` ➔ `Pending Customer` ➔ `Done`) to track issues from ingestion to closure.
 * **Optimized Agent Queues**: Built isolated queues to separate regular service requests from high-priority incident tickets, reducing manual dispatch overhead.
 * **Production Simulation**: Logged and processed simulated tickets (e.g., *Laptop Screen Flickering* & *VPN Access Requests*) to validate end-to-end diagnostic resolution paths.
 
-### 3. Service Level Agreement (SLA) Controls
-* **Resolution Deadlines**: Configured built-in SLA timers to manage resolution thresholds.
-* **Priority Alignment**: Established fast-response lanes for critical connectivity and access blockages, while maintaining standard fulfillment tracks for software deployments.
+*📸 **Live Ticket Simulation & Queue Tracking:***
+![IT Form Fill Up Simulation](screenshots/it-service-create-form-fill-up.png)
+![First Ticket Generation Overview](screenshots/05_First_Ticket_Created.png)
+![Central Queues Tracking](screenshots/queue.png)
+![All Live Active Tickets](screenshots/10_All_Live_Tickets.png)
+![Successful Lifecycle Ticket Resolution](screenshots/11_Ticket_Resolved.png)
 
-### 4. Advanced Jira Work Management Automations (10 Production-Grade Rules)
-* **Rule 1: Account Lockout Auto-Assignment**: Set up an immediate route to auto-assign all incoming 'Password' or 'Lockout' tickets to the active technician.
-* **Rule 2: VIP / Manager Escalation**: Engineered a conditional branch that automatically upgrades a ticket to `Highest Priority` if keywords like *Manager*, *Urgent*, or *CEO* are detected.
-* **Rule 3: Inactive Ticket Cleanup**: Formulated a daily cron-schedule trigger to auto-close stale tickets stuck in customer-pending status for more than 3 days.
-* **Rule 4: Hardware Team Dispatcher**: Configured automated email notifications to inventory personnel (`tech@store.com`) whenever asset replacements are triggered.
-* **Rule 5: Automatic Customer Response**: Deployed an instant system-generated comment on new tickets to communicate initial expectations and boost Customer Satisfaction (CSAT).
-* **Rule 6: Hardware Asset ID Mandate**: Programmed a validator rule that flags a ticket and moves it to `Waiting for Customer` status if the *Asset ID* field is left empty during submittal.
-* **Rule 7: Specialized Routing for Applications**: Built a classifier rule that detects complex software provisioning tickets and routes them away from general L1 to the dedicated Applications Support Queue.
-* **Rule 8: Automated CSAT Survey Dispatch**: Configured a lifecycle trigger that automatically emails a structured feedback and satisfaction survey to the user the exact second a ticket is marked `Done`.
-* **Rule 9: Dynamic Ticket Reopening**: Engineered a condition rule that automatically moves a closed or resolved ticket back to `In Progress` if a customer posts a follow-up comment.
-* **Rule 10: Urgent Alert for Aging Tickets**: Built a daily morning routine trigger that sweeps the database and places an escalation flag on any item stuck in `In Progress` for more than 5 days.
+---
+
+### 3. Advanced Jira Work Management Automations (Production-Grade Rules)
+
+Here is the functional logic and visual proof of the custom automation workflows built into the system to minimize manual IT dispatch overhead:
+
+* **Account Lockout Auto-Assignment**: Set up an immediate route to auto-assign all incoming 'Password' or 'Lockout' tickets to the active technician.
+* **VIP / Manager Escalation**: Upgrades a ticket to `Highest Priority` if keywords like *Manager*, *Urgent*, or *CEO* are detected.
+* **Hardware Team Dispatcher**: Configured automated email notifications to inventory personnel (`tech@store.com`) whenever asset replacements are triggered.
+* **Automatic Customer Response**: Deployed an instant system-generated comment on new tickets to communicate initial expectations.
+* **Hardware Asset ID Mandate**: Moves a ticket to `Waiting for Customer` status if the *Asset ID* field is left empty during submittal.
+* **Automated CSAT Survey Dispatch**: Automatically emails a satisfaction survey to the user the exact second a ticket is marked `Done`.
+* **Dynamic Ticket Reopening**: Moves a closed ticket back to `In Progress` if a customer posts a follow-up comment.
+* **Urgent Alert for Aging Tickets**: Daily morning sweep that places an escalation flag on any item stuck in `In Progress` for more than 5 days.
+
+*📸 **Core Automations Architecture Map:***
+![Jira Automation Flow Mapping](screenshots/12_Final_Automation_Flow.png)
+![OS Ticket Page Installation Reference](screenshots/os-ticket-page-installation.png)
 
 ---
 
