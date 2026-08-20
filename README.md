@@ -1,30 +1,43 @@
-# 💻 Enterprise HelpDesk (Jira Service Management Portfolio Project)
+# 💻 Enterprise HelpDesk (Jira Service Management Project)
 
 ## 📌 Project Overview
-This project demonstrates a production-ready **IT Service Management (ITSM)** ticketing ecosystem built inside **Jira Service Management (JSM)**. Designed to simulate real-world L1/L2 IT Support Engineer workflows, this service desk manages user hardware requests, software access provisioning, and urgent account/password issues for an organization.
+This repository contains the design, implementation, and configuration documentation of an enterprise-level **IT Service Management (ITSM)** system built inside **Jira Service Management (JSM)**. This project replicates live L1/L2 IT Support and Desktop Support operations, focusing on service catalog deployment, incident tracking, and workflow automation.
 
 ---
 
-## 🌟 Key Features Implemented
+## 🏗️ Project Architecture & Implementation
 
-### 1. Unified Customer Help Center
-* Designed user-friendly Request Types mapped under specific IT catalog categories (Computers, Applications, Login Accounts).
-* Embedded custom Description templates to mandate critical data collection (e.g., Asset ID, Software Justification, Locked Username) straight from the end-user.
+### 1. Customer-Facing Service Portal (Front-End)
+* **Categorized Help Center**: Deployed an online customer portal structured with dedicated IT service request categories (Computers, Applications, Login Accounts).
+* **Data-Driven Intake Forms**: Configured standardized request types for high-frequency IT issues:
+  * **Laptop & Hardware Support**: Custom form layout to enforce corporate asset tracking.
+  * **Software & Application Access**: Integrated baseline justification parameters.
+  * **Account & Password Lockout**: Configured high-visibility intake fields for quick identification.
 
-### 2. ITIL-Aligned Ticketing Workflows
-* Engineered lifecycle transitions for incoming support items: `Waiting for Support` ➔ `In Progress` ➔ `Pending Customer` ➔ `Done`.
-* Structured dedicated Agent Queues to auto-segregate urgent login lockouts from hardware replacements.
+### 2. Incident Management & Queue Configuration (Back-End)
+* **Ticket Lifecycle Tracking**: Structured a 4-stage operational workflow (`Waiting for Support` ➔ `In Progress` ➔ `Pending Customer` ➔ `Done`) to track issues from ingestion to closure.
+* **Optimized Agent Queues**: Built isolated queues to separate regular service requests from high-priority incident tickets, reducing manual dispatch overhead.
+* **Production Simulation**: Logged and processed simulated tickets (e.g., *Laptop Screen Flickering* & *VPN Access Requests*) to validate end-to-end diagnostic resolution paths.
 
-### 3. Advanced Jira Automation Rules (Smart Operations)
-* **Auto-Assignment Flow**: Programmed an instant route to auto-assign all incoming 'Password Reset' or 'Account Lockout' tickets to the active IT engineer.
-* **VIP & Manager Escalation**: Configured condition alerts that automatically elevate ticket priority to `Highest` if the summary matches keywords like *Manager*, *Urgent*, or *CEO*.
-* **Queue Cleanup (SLA Timer)**: Deployed daily checks to automatically resolve stale tickets stuck in customer-pending states after 3 days of inactivity.
-* **Hardware Store Alerts**: Set up auto-email dispatchers (`tech@store.com`) whenever a user submits a laptop or equipment replacement query.
-* **SLA First Response Greeting**: Created instant automated greeting comments on newly generated items to assure users their issue is being reviewed.
+### 3. Service Level Agreement (SLA) Controls
+* **Resolution Deadlines**: Configured built-in SLA timers to manage resolution thresholds.
+* **Priority Alignment**: Established fast-response lanes for critical connectivity and access blockages, while maintaining standard fulfillment tracks for software deployments.
+
+### 4. Advanced Jira Work Management Automations (10 Production-Grade Rules)
+* **Rule 1: Account Lockout Auto-Assignment**: Set up an immediate route to auto-assign all incoming 'Password' or 'Lockout' tickets to the active technician.
+* **Rule 2: VIP / Manager Escalation**: Engineered a conditional branch that automatically upgrades a ticket to `Highest Priority` if keywords like *Manager*, *Urgent*, or *CEO* are detected.
+* **Rule 3: Inactive Ticket Cleanup**: Formulated a daily cron-schedule trigger to auto-close stale tickets stuck in customer-pending status for more than 3 days.
+* **Rule 4: Hardware Team Dispatcher**: Configured automated email notifications to inventory personnel (`tech@store.com`) whenever asset replacements are triggered.
+* **Rule 5: Automatic Customer Response**: Deployed an instant system-generated comment on new tickets to communicate initial expectations and boost Customer Satisfaction (CSAT).
+* **Rule 6: Hardware Asset ID Mandate**: Programmed a validator rule that flags a ticket and moves it to `Waiting for Customer` status if the *Asset ID* field is left empty during submittal.
+* **Rule 7: Specialized Routing for Applications**: Built a classifier rule that detects complex software provisioning tickets and routes them away from general L1 to the dedicated Applications Support Queue.
+* **Rule 8: Automated CSAT Survey Dispatch**: Configured a lifecycle trigger that automatically emails a structured feedback and satisfaction survey to the user the exact second a ticket is marked `Done`.
+* **Rule 9: Dynamic Ticket Reopening**: Engineered a condition rule that automatically moves a closed or resolved ticket back to `In Progress` if a customer posts a follow-up comment.
+* **Rule 10: Urgent Alert for Aging Tickets**: Built a daily morning routine trigger that sweeps the database and places an escalation flag on any item stuck in `In Progress` for more than 5 days.
 
 ---
 
-## 💡 Interview Talking Points (What I Learned)
-* **ITSM & ITIL Basics**: Gained hands-on experience handling real incidents, service requests, and categorization principles.
-* **Jira Administration**: Learned how to configure request types, manage hidden fields, read active queues, and streamline agent-to-customer communications.
-* **SLA Awareness**: Understood the importance of prioritizing urgent business operational blockages over standard hardware deployments.
+## 💡 Technical Core Competencies Demonstrated
+* **ITSM Framework**: Hands-on management of incidents vs. service requests under standard operational guidelines.
+* **Jira Administration**: Practical proficiency in request schemas, custom field validation, status transitions, and administrative diagnostics.
+* **Automation Engineering**: Deep utilization of complex conditional logic (When ➔ If ➔ Then) to optimize IT department overhead.
