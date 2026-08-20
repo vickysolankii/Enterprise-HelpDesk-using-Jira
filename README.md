@@ -28,6 +28,9 @@ This repository contains the design, implementation, and configuration documenta
 ![Software & Application Access Request](screenshots/Software%20&%20Application%20Access.png)
 ![Account & Password Lockout Form](screenshots/Account%20&%20Password%20Lockout.png)
 
+![Account & Password Lockout Form](screenshots/MONITOER.png)
+
+
 ---
 
 ### 2. Incident Management & Queue Configuration (Back-End)
