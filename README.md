@@ -50,7 +50,7 @@ This repository contains the design, implementation, and configuration documenta
 
 *📸 **Live Ticket Simulation & Queue Tracking:***
 
-![First Ticket Generation Overview](screenshots/05_First_Ticket_Created.png)
+![First Ticket Generation Overview](screenshots/open.png)
 ![Central Queues Tracking](screenshots/queue.png)
 ![All Live Active Tickets](screenshots/10_All_Live_Tickets.png)
 ![Successful Lifecycle Ticket Resolution](screenshots/11_Ticket_Resolved.png)
