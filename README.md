@@ -19,6 +19,8 @@ This repository contains the design, implementation, and configuration documenta
 
 ![Jira Template Selection](screenshots/basic-it-sevice-management-template.png)
 
+![IT Form Fill Up Simulation](screenshots/it-service-create-form-fill-up.png)
+
 *📸 **Customized Support Catalogs & Requests(Portal for user reqest):***
 ![Laptop & Hardware Support Catalog](screenshots/portal.png)
 
@@ -34,7 +36,7 @@ This repository contains the design, implementation, and configuration documenta
 * **Production Simulation**: Logged and processed simulated tickets (e.g., *Laptop Screen Flickering* & *VPN Access Requests*) to validate end-to-end diagnostic resolution paths.
 
 *📸 **Live Ticket Simulation & Queue Tracking:***
-![IT Form Fill Up Simulation](screenshots/it-service-create-form-fill-up.png)
+
 ![First Ticket Generation Overview](screenshots/05_First_Ticket_Created.png)
 ![Central Queues Tracking](screenshots/queue.png)
 ![All Live Active Tickets](screenshots/10_All_Live_Tickets.png)
